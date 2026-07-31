@@ -19,6 +19,15 @@
                 <p id="totalDays">0/31</p>
             </div>
             <div id="calendarContent">
+                <div id="weekdays">
+                    <div class="weekday">Mon</div>
+                    <div class="weekday">Tue</div>
+                    <div class="weekday">Wed</div>
+                    <div class="weekday">Thu</div>
+                    <div class="weekday">Fri</div>
+                    <div class="weekday">Sat</div>
+                    <div class="weekday">Sun</div>
+                </div>
                 <div id="tracker">
                     <div class="days">
                         <div class="day">1</div>
@@ -69,7 +78,7 @@
             </div>
         </div>
      </div>
-     <button id="resetButton">Reset Button</button>
+     <button id="resetButton">Reset</button>
 </body>
 
 <style>
@@ -79,12 +88,14 @@
         background-color: rgba(114, 7, 7, 0.751);
         background-blend-mode: lighten;
         text-align: center;
-        font-family: "Grimace";
+        font-family: "Grimace", sans-serif;
+        letter-spacing: 0.5px;
     }
 
     #title{
         margin-top: 100px;
         line-height: 10px;
+        letter-spacing: 1px;
     }
 
     #subtitle{
@@ -96,6 +107,7 @@
     #calendarContainer{
         display: flex;
         justify-content: center;
+        margin-bottom: 200px;
     }
 
     #calendarDiv{
@@ -104,7 +116,7 @@
         margin: auto;
         align-content: center;
         text-align: center;
-        width: 85%;
+        width: 45%;
     }
 
     #calendarHeading{
@@ -112,7 +124,8 @@
         justify-content: space-between;
         border-radius: 10px 10px 0px 0px;
         border: 2px solid black;
-        padding: 0px 20px;
+        border-bottom: 0;
+        padding: 2px 20px 0px 20px;
         font-size: 20px;
         background-color: darkred;
         line-height: 0px;
@@ -124,19 +137,52 @@
         border-radius: 0px 0px 10px 10px;
     }
 
+    #weekdays{
+        display: flex;
+        justify-content:space-around;
+    }
+
+    .weekday{
+        width: 25px;
+        margin: 3px;
+        font-size: 16px;
+        text-align: center;
+    }
+
     .days{
         display: flex;   
-        justify-content: space-between;   
+        justify-content: space-around;   
     }
 
     .day{
         width: 25px;
         margin: 3px;
-        padding: 10px;
-        font-size: 18px;
+        padding: 8px;
+        font-size: 16px;
         text-align: center;
-        border-radius: 40px;
+        border-radius: 20px;
         /* background-color: darkred; */
+    }
+
+    #resetButton{
+        background-color: transparent;
+        color: darkred;
+        border: 2px solid darkred;
+        padding: 10px 22px;
+        margin-top: 20px;
+        border-radius: 12px;
+        font-weight: 600; /* Чуть жирнее */
+        transition: all 0.25s ease; /* Плавность изменений */
+        cursor: pointer; /* Курсор-рука при наведении */
+    }
+
+        /* --- ЧТО ПРОИСХОДИТ ПРИ НАВЕДЕНИИ --- */
+        #resetButton:hover {
+        /* При наведении фон заполняется цветом, а текст становится белым */
+        background-color: darkred;
+        color: black;
+        /* Кнопка приподнимается */
+        /* transform: translateY(-2px); */
     }
 </style>
 
