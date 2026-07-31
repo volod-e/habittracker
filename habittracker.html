@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <title>Habit Tracker</title>
-    <link rel="icon" type="image/x-icon" href="../images/anatomicalheart.png">
-    <link href="https://fonts.cdnfonts.com/css/grimace" rel="stylesheet">
-                               
+    <link rel="icon" type="image/x-icon" href="../images/staricon.png">
+    <link href="https://fonts.cdnfonts.com/css/press-start" rel="stylesheet">
 </head>
 <body>
     <!-- TITLE AND SUBTITLE -->
@@ -83,19 +82,17 @@
 
 <style>
     body{
-        background-image: url("../images/yobaniyai.jpg");
-        background-size: 100%;
-        background-color: rgba(114, 7, 7, 0.751);
-        background-blend-mode: lighten;
+        background-image: url("../images/redpixelstars.jpg");
+        background-size: 400px;
+        background-color: rgba(87, 1, 1, 0.897);
+        background-blend-mode:exclusion;
         text-align: center;
-        font-family: "Grimace", sans-serif;
-        letter-spacing: 0.5px;
+        font-family: "Press Start", sans-serif;
     }
 
     #title{
         margin-top: 100px;
         line-height: 10px;
-        letter-spacing: 1px;
     }
 
     #subtitle{
@@ -143,9 +140,9 @@
     }
 
     .weekday{
-        width: 25px;
+        width: 40px;
         margin: 3px;
-        font-size: 16px;
+        font-size: 14px;
         text-align: center;
     }
 
@@ -157,21 +154,24 @@
     .day{
         width: 25px;
         margin: 3px;
-        padding: 8px;
-        font-size: 16px;
+        padding: 10px;
+        font-size: 14px;
         text-align: center;
         border-radius: 20px;
         /* background-color: darkred; */
+        cursor: pointer;
     }
 
     #resetButton{
         background-color: transparent;
         color: darkred;
         border: 2px solid darkred;
-        padding: 10px 22px;
+        padding: 10px 20px;
         margin-top: 20px;
         border-radius: 12px;
-        font-weight: 600; /* Чуть жирнее */
+        font-size: 20px;
+        font-family: "Press Start";
+        /* font-weight: 600; Чуть жирнее */
         transition: all 0.25s ease; /* Плавность изменений */
         cursor: pointer; /* Курсор-рука при наведении */
     }
